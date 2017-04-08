@@ -1,0 +1,20 @@
+<h1>My Grocery List</h1>
+
+<ul><% for(var i=0; i < mylist.length;i++){ %>
+	<li> <a href="/delete/:<%=i%>">X</a> <%= mylist[i] %></li>
+<% } %></ul>
+
+<p>What should I do?
+<form action="/add" method="post">
+<input name="newItem" type="text" value="">
+<input type="submit">
+</form></p>
+<p>What action to perform?
+<form >
+<input name="actionItem" type="text" autofocus value="">
+<input type="button" onclick="actionJson()" value="Try Action">
+</form></p>
+
+
+<script src="/jquery-1.11.0.min.js"></script>
+<script src="/test.js"></script>
